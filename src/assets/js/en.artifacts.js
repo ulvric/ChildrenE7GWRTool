@@ -154,6 +154,7 @@ export const en = [
   { _id: 'rocket-punch-gauntlet', name: 'Rocket Punch Gauntlet' },
   { _id: 'rod-of-amaryllis', name: 'Rod of Amaryllis' },
   { _id: 'rosa-hargana', name: 'Rosa Hargana' },
+  { _id: 'ruyi-jingu-bang', name: 'Ruyi Jingu Bang' },
   { _id: 'sacred-tree-branch', name: 'Sacred Tree Branch' },
   { _id: 'samsara-prayer-beads', name: 'Samsara Prayer Beads' },
   { _id: 'santa-muerte', name: 'Santa Muerte' },
