@@ -116,6 +116,7 @@ export const en = [
   { _id: 'last-teatime', name: 'Last Teatime' },
   { _id: 'love-potion', name: 'Love Potion' },
   { _id: 'magarahas-tome', name: "Magaraha's Tome" },
+  { _id: 'magic-bubble-maker', name: 'Magic Bubble Maker' },
   { _id: 'magic-for-friends', name: 'Magic for Friends' },
   { _id: 'manica-of-control', name: 'Manica of Control' },
   { _id: 'mature-sunglasses', name: 'Mature Sunglasses' },
