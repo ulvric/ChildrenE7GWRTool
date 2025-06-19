@@ -65,3 +65,13 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## How to Update Data
+
+You must have python installed in your system to be able to do this.
+
+After setting up the project, run the following:
+
+```
+npm run update-data
+```
