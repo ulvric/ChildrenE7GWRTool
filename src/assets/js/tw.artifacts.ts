@@ -1,4 +1,6 @@
-export const tw = [
+import { Artifact } from './types';
+
+export const tw: Artifact[] = [
   {
     _id: 'a-little-queens-huge-crown',
     name: '\u5c0f\u5c0f\u5973\u738b\u7684\u5de8\u5927\u738b\u51a0',

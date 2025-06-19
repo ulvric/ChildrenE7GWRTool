@@ -1,4 +1,6 @@
-export const fr = [
+import { ArtifactIncomplete } from './types';
+
+export const fr: ArtifactIncomplete[] = [
   { _id: 'a-little-queens-huge-crown', name: "Couronne d'une petite reine" },
   { _id: 'a-song-for-everybody', name: 'Chant pour tous' },
   { _id: 'a-symbol-of-unity', name: 'Preuve de solidarit\u00e9' },

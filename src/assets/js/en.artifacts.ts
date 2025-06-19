@@ -1,4 +1,6 @@
-export const en = [
+import { Artifact } from './types';
+
+export const en: Artifact[] = [
     {
         "_id": "3f",
         "name": "3F",
