@@ -16,7 +16,7 @@ urllib.request.install_opener(opener)
 print('Start generating js files...')
 
 
-print('Start generating heroes.js...')
+print('Start generating heroes.ts...')
 
 print('Downloading heroes.html...')
 url = 'https://epic7db.com/heroes'
@@ -39,15 +39,17 @@ for hero_li in hero_list:
     if character['rarity'] > 1:
         characters.append(character)
 
-print('Saving heroes.js...')
+print('Saving heroes.ts...')
 back_json=json.dumps(characters, indent = 4, ensure_ascii=True)
-back_json = 'export const en = ' +back_json + ';'
-with open("../assets/js/en.characters.js", "w", encoding='utf-8') as outfile: 
+back_json = '''import { Character } from './types';
+
+export const en: Character[] = ''' +back_json + ';'
+with open("../assets/js/en.characters.ts", "w", encoding='utf-8') as outfile: 
     outfile.write(back_json)
 
-print('Done generating heroes.js')
+print('Done generating heroes.ts')
 
-print('Start generating artifacts.js...')
+print('Start generating artifacts.ts...')
 
 print('Downloading artifacts.html...')
 url = 'https://epic7db.com/artifacts'
@@ -68,13 +70,15 @@ for artifact_li in artifact_list:
     if artifact['rarity'] > 2:
         artifacts.append(artifact)
 
-print('Saving artifacts.js...')
+print('Saving artifacts.ts...')
 back_json=json.dumps(artifacts, indent = 4, ensure_ascii=True)
-back_json = 'export const en = ' +back_json + ';'
-with open("../assets/js/en.artifacts.js", "w", encoding='utf-8') as outfile: 
+back_json = '''import { Artifact } from './types';
+
+export const en: Artifact[] = ''' +back_json + ';'
+with open("../assets/js/en.artifacts.ts", "w", encoding='utf-8') as outfile: 
     outfile.write(back_json)
 
-print('Done generating artifacts.js')
+print('Done generating artifacts.ts')
 
 print('Cleaning up .tmp folder...')
 os.rmdir('./.tmp')
