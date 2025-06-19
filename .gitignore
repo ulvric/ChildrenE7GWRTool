@@ -30,3 +30,6 @@ __pycache__
 *.pyd
 *.pyw
 *.pyz
+
+# Data Update Temp Files
+.tmp
