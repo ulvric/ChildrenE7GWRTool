@@ -76,8 +76,8 @@ with open("../assets/js/en.artifacts.js", "w", encoding='utf-8') as outfile:
 
 print('Done generating artifacts.js')
 
-# print('Cleaning up .tmp folder...')
-# os.rmdir('./.tmp')
-# print('Cleaned up .tmp folder')
+print('Cleaning up .tmp folder...')
+os.rmdir('./.tmp')
+print('Cleaned up .tmp folder')
 
 print('Done generating js files')
