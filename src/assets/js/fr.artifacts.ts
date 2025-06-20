@@ -91,7 +91,7 @@ export const fr: ArtifactIncomplete[] = [
   { _id: 'indestructible-gaiters', name: 'Gu\u00eatres indestructibles' },
   { _id: 'infinity-basket', name: 'Panier infini' },
   { _id: 'iron-fan', name: '\u00c9ventail de fer' },
-  { _id: 'jackos-symbol', name: "Symboles de Jack-O'" },
+  { _id: 'jack-os-symbol', name: "Symboles de Jack-O'" },
   { _id: 'junkyard-dog', name: 'Junkyard Dog' },
   { _id: 'justice-for-all', name: 'Justice pour tous' },
   { _id: 'kaladra', name: "Kal'adra" },

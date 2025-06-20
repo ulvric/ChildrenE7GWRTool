@@ -120,7 +120,7 @@ export const fr: CharacterIncomplete[] = [
   { _id: 'ilynav', name: 'Ilynav' },
   { _id: 'inferno-khawazu', name: 'Khawazu infernal' },
   { _id: 'iseria', name: 'Iseria' },
-  { _id: 'jacko', name: "Jack-O'" },
+  { _id: 'jack-o', name: "Jack-O'" },
   { _id: 'januta', name: 'Januta' },
   { _id: 'jecht', name: 'Jecht' },
   { _id: 'jena', name: 'Jena' },
