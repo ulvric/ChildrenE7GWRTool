@@ -14,27 +14,6 @@
               <a class="nav-item nav-link" href="#result" data-toggle="tab">{{ t('report') }}</a>
             </nav>
           </div>
-          <div class="toast-wrapper" style="position: absolute; top: -14px; right: 14px; z-index: 1000; height: 47px">
-            <div id="resettoast" class="toast" data-delay="3000" aria-atomic="true">
-              <div class="toast-body">
-                {{ t('resetToast') }}
-              </div>
-            </div>
-          </div>
-          <div class="toast-wrapper" style="position: absolute; top: -14px; right: 14px; z-index: 1000; height: 47px">
-            <div id="copytoast" class="toast" data-delay="3000" aria-atomic="true">
-              <div class="toast-body">
-                {{ t('copyToast') }}
-              </div>
-            </div>
-          </div>
-          <div class="toast-wrapper" style="position: absolute; top: -14px; right: 14px; z-index: 1000; height: 47px">
-            <div id="slcopytoast" class="toast" data-delay="3000" aria-atomic="true">
-              <div class="toast-body">
-                {{ t('copyToast') }}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="tab-content">
