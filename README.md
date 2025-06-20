@@ -30,7 +30,7 @@ This project is made with the following technologies:
 * Vite
 * Pinia
 * Vue I18n
-* Bootstrap 5
+* Bootstrap
 * jQuery
 * Bootstrap Select
 
