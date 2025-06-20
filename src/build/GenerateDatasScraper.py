@@ -1,4 +1,4 @@
-# To update data, run the ./build script which will call this script.
+# To update data, run the 'npm run update-data' script which will call this script.
 # This script ONLY updates the english data. Unfortunately, the other languages are no longer supported.
 
 import urllib.request, json, os
