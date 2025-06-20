@@ -3,34 +3,34 @@
     <div class="form-row">
       <div class="col-md-3">
         <div class="form-group">
-          <SelectCharacter v-model="hero.name" :title="$t('firstHero')" />
+          <SelectCharacter v-model="hero.name" :title="t('firstHero')" />
         </div>
       </div>
       <div class="col-md-3">
         <div class="input-group form-group">
           <input v-model.number="hero.speed" type="number" min="0" class="form-control" />
           <div class="input-group-append">
-            <span class="input-group-text">{{ $t('speed') }}</span>
+            <span class="input-group-text">{{ t('speed') }}</span>
           </div>
-          <br /><small class="text-muted"> {{ $t('heroesSaved') }}</small>
+          <br /><small class="text-muted"> {{ t('heroesSaved') }}</small>
         </div>
       </div>
       <div class="col-md-3">
         <div class="input-group form-group">
           <input v-model.number="hero.crBonus" type="number" min="0" class="form-control" />
           <div class="input-group-append">
-            <span class="input-group-text">{{ $t('crBonus') }}</span>
+            <span class="input-group-text">{{ t('crBonus') }}</span>
           </div>
-          <br /><small class="text-muted"> {{ $t('crBonusDesc') }}</small>
+          <br /><small class="text-muted"> {{ t('crBonusDesc') }}</small>
         </div>
       </div>
       <div class="col-md-3">
         <div class="input-group form-group">
           <input v-model.number="hero.crPush" type="number" min="0" class="form-control" />
           <div class="input-group-append">
-            <span class="input-group-text">{{ $t('crPush') }}</span>
+            <span class="input-group-text">{{ t('crPush') }}</span>
           </div>
-          <br /><small class="text-muted"> {{ $t('crPushDesc') }}</small>
+          <br /><small class="text-muted"> {{ t('crPushDesc') }}</small>
         </div>
       </div>
     </div>
@@ -40,16 +40,16 @@
         <div class="input-group form-group">
           <input v-model.number="hero.crPushAlly" type="number" min="0" class="form-control" />
           <div class="input-group-append">
-            <span class="input-group-text">{{ $t('crPushAlly') }}</span>
+            <span class="input-group-text">{{ t('crPushAlly') }}</span>
           </div>
-          <br /><small class="text-muted"> {{ $t('crPushAllyDesc') }}</small>
+          <br /><small class="text-muted"> {{ t('crPushAllyDesc') }}</small>
         </div>
       </div>
       <div class="col-md-3">
         <div class="form-group">
           <label>
             <input v-model="hero.speedDown" type="checkbox" class="mr-2" />
-            <img src="assets/images/Speed_down.png" />
+            <img src="/assets/images/Speed_down.png" />
           </label>
         </div>
       </div>
@@ -57,25 +57,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue, { PropType } from 'vue';
-import ComponentSelectCharacter from './SelectCharacter.vue';
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+import SelectCharacter from './SelectCharacter.vue';
+import type { Hero } from '../model/Hero';
 
-export interface Hero {
-  name: string;
-  speed: number;
-  crBonus: number;
-  crPush: number;
-  crPushAlly: number;
-  speedDown: boolean;
-}
+const { t } = useI18n({ useScope: 'global' });
 
-export default Vue.extend({
-  components: {
-    SelectCharacter: ComponentSelectCharacter,
-  },
-  props: {
-    hero: Object as PropType<Hero>,
-  },
-});
+defineProps<{
+  hero: Hero;
+}>();
 </script>
