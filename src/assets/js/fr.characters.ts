@@ -1,4 +1,6 @@
-export const fr = [
+import { CharacterIncomplete } from './types';
+
+export const fr: CharacterIncomplete[] = [
   { _id: 'achates', name: 'Achates' },
   { _id: 'adin', name: 'Adine' },
   { _id: 'adlay', name: 'Adlay' },
@@ -118,7 +120,7 @@ export const fr = [
   { _id: 'ilynav', name: 'Ilynav' },
   { _id: 'inferno-khawazu', name: 'Khawazu infernal' },
   { _id: 'iseria', name: 'Iseria' },
-  { _id: 'jacko', name: "Jack-O'" },
+  { _id: 'jack-o', name: "Jack-O'" },
   { _id: 'januta', name: 'Januta' },
   { _id: 'jecht', name: 'Jecht' },
   { _id: 'jena', name: 'Jena' },

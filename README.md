@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tool help you to report the enemy defense during guid wars in epic seven mobile game.
+This tool helps you to report the enemy defense during guild wars in Epic Seven mobile game.
 
 ![screenshot](https://github.com/Apen/epicseven/raw/master/public/assets/images/screen-1.png)
 
@@ -23,45 +23,53 @@ Just copy/paste it in your discord channel.
 
 ## Project setup
 
-This project is made with the following technologies :
+This project is made with the following technologies:
 
-* nodejs
-* vue
-* vue-cli
-* vue-i18n
-* babel
-* webpack
-
-For the frontend :
-
-* bootstrap
-* jquery
-* popper
-* bootstrap-select
+* Vue 3
+* TypeScript
+* Vite
+* Pinia
+* Vue I18n
+* Bootstrap
+* jQuery
+* Bootstrap Select
 
 ### Install all modules
 
-```
+```bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 
-```
-npm run serve
+```bash
+npm run dev
 ```
 
 ### Compiles and minifies for production
 
-```
+```bash
 npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
 ```
 
 ### Lints and fixes files
 
-```
+```bash
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## How to Update Data
+
+You must have python installed in your system to be able to do this.
+
+After setting up the project, run the following:
+
+```bash
+npm run update-data
+```

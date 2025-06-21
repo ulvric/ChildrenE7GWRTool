@@ -1,11 +1,11 @@
 <template>
   <nav class="navbar navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">{{ $t('title') }}</a>
+      <a class="navbar-brand" href="#">{{ t('title') }}</a>
       <div class="col-md-6" style="display: flex; align-items: center; justify-content: flex-end">
         <div class="custom-control mr-3">
-          <select id="locale-changer" v-model="$i18n.locale" class="form-control" @change="changeLang()">
-            <option v-for="lang in langs" :value="lang.code" :key="lang.code">
+          <select id="locale-changer" v-model="locale" class="form-control" @change="changeLang()">
+            <option v-for="lang in store.langs" :value="lang.code" :key="lang.code">
               {{ lang.name }}
             </option>
           </select>
@@ -19,7 +19,7 @@
             true-value="true"
             false-value="false"
           />
-          <label class="custom-control-label" for="darkSwitch">{{ $t('darkMode') }}</label>
+          <label class="custom-control-label" for="darkSwitch">{{ t('darkMode') }}</label>
         </div>
         <div class="custom-control">
           <a href="https://www.buymeacoffee.com/apencoffee" target="_blank">Buy me a coffee</a>
@@ -29,42 +29,37 @@
   </nav>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import MainStore from '../stores/MainStore';
+<script setup lang="ts">
+import { watch, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { storeToRefs } from 'pinia';
+import { useMainStore } from '../stores/MainStore';
 
-export default Vue.extend({
-  data() {
-    return {
-      darkMode: MainStore.data.darkMode as string,
-      langs: MainStore.data.langs,
-    };
-  },
-  watch: {
-    darkMode(val: string): void {
-      this.toggleDarkMode(val as string);
-    },
-  },
-  mounted() {
-    if (localStorage.getItem('darkMode')) {
-      this.toggleDarkMode(localStorage.getItem('darkMode') as string);
-    }
-  },
-  methods: {
-    toggleDarkMode(val: string): void {
-      if (val === 'true') {
-        document.body.classList.add('dark');
-        this.darkMode = 'true';
-      } else {
-        document.body.classList.remove('dark');
-        this.darkMode = 'false';
-      }
-      localStorage.setItem('darkMode', val);
-    },
-    changeLang(): void {
-      localStorage.setItem('langCode', this.$i18n.locale);
-      document.title = this.$t('title') as string;
-    },
-  },
+const { t, locale } = useI18n({ useScope: 'global' });
+const store = useMainStore();
+const { darkMode } = storeToRefs(store);
+
+const toggleDarkMode = (val: string) => {
+  if (val === 'true') {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
+  store.setDarkMode(val);
+};
+
+const changeLang = () => {
+  localStorage.setItem('langCode', locale.value);
+  document.title = t('title');
+};
+
+watch(darkMode, (val) => {
+  toggleDarkMode(val);
+});
+
+onMounted(() => {
+  if (localStorage.getItem('darkMode')) {
+    toggleDarkMode(localStorage.getItem('darkMode') as string);
+  }
 });
 </script>

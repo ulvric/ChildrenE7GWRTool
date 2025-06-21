@@ -1,4 +1,8 @@
-export const nicknames = [];
+interface Nicknames {
+  [key: string]: string;
+}
+
+export const nicknames: Nicknames = {};
 // characters
 nicknames.achates = '火奶';
 nicknames.aither = '小王子';

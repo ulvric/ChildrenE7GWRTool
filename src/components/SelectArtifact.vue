@@ -1,11 +1,12 @@
 <template>
   <select
-    :value="value"
+    :value="model"
     class="selectpicker"
     :title="title"
     data-live-search="true"
     data-width="100%"
     @change="select($event)"
+    ref="selectpicker"
   >
     <option v-for="item in artifacts" :key="item._id" :data-tokens="getTokens(item)">
       {{ item.name }}
@@ -13,8 +14,9 @@
   </select>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
+<script setup lang="ts">
+import { ref, onMounted, watch, nextTick } from 'vue';
+import { useI18n } from 'vue-i18n';
 import $ from 'jquery';
 import 'bootstrap-select';
 import { en } from '../assets/js/en.artifacts';
@@ -22,67 +24,75 @@ import { fr } from '../assets/js/fr.artifacts';
 import { cn } from '../assets/js/cn.artifacts';
 import { tw } from '../assets/js/tw.artifacts';
 import { nicknames } from '../assets/js/nicknames';
+import type { ArtifactIncomplete } from '../assets/js/types';
 
-export default Vue.extend({
-  props: ['title', 'value'],
-  data() {
-    return {
-      artifacts: en,
-      nicknames,
-    };
-  },
-  created() {
-    this.artifacts = this.getItems();
-  },
-  watch: {
-    title(): void {
-      this.artifacts = this.getItems();
-    },
-  },
-  updated() {
-    $(this.$el).selectpicker({ title: this.title }).selectpicker('render');
-  },
-  methods: {
-    select($event: Event): void {
-      this.$emit('input', ($event.target as HTMLInputElement).value);
-    },
-    /* eslint-disable  @typescript-eslint/no-explicit-any */
-    getItems(): Array<any> {
-      let artifacts = null;
-      switch (this.$i18n.locale) {
-        case 'en':
-          artifacts = en;
-          break;
-        case 'fr':
-          artifacts = this.uniqueMerge([en, fr]);
-          break;
-        case 'cn':
-          artifacts = this.uniqueMerge([en, cn]);
-          break;
-        case 'tw':
-          artifacts = this.uniqueMerge([en, tw]);
-          break;
-        default:
-          artifacts = en;
-          break;
-      }
-      return artifacts;
-    },
-    uniqueMerge(arrays: Array<any>) {
-      const results = {};
-      arrays.forEach((arr) => {
-        arr.forEach((item: { _id: string; name: string }) => {
-          results[item._id] = item;
-        });
-      });
-      return Object.values(results);
-    },
-    getTokens(item: { _id: string }): string {
-      if (item._id && nicknames[item._id]) {
-        return nicknames[item._id];
-      }
-      return '';
-    },
-  },
+interface Props {
+  title: string;
+}
+
+const props = defineProps<Props>();
+const model = defineModel<string>();
+
+const { locale } = useI18n({ useScope: 'global' });
+const artifacts = ref<ArtifactIncomplete[]>(en);
+const selectpicker = ref<HTMLSelectElement>();
+
+function select($event: Event): void {
+  model.value = ($event.target as HTMLInputElement).value;
+}
+
+function uniqueMerge(arrays: Array<ArtifactIncomplete[]>) {
+  const results: Record<string, ArtifactIncomplete> = {};
+  arrays.forEach((arr) => {
+    arr.forEach((item) => {
+      results[item._id] = item;
+    });
+  });
+  return Object.values(results) as ArtifactIncomplete[];
+}
+
+function getTokens(item: { _id: string }): string {
+  if (item._id && nicknames[item._id]) {
+    return nicknames[item._id];
+  }
+  return '';
+}
+
+function getItems(): ArtifactIncomplete[] {
+  let items: ArtifactIncomplete[] = [];
+  switch (locale.value) {
+    case 'en':
+      items = en;
+      break;
+    case 'fr':
+      items = uniqueMerge([en, fr]);
+      break;
+    case 'cn':
+      items = uniqueMerge([en, cn]);
+      break;
+    case 'tw':
+      items = uniqueMerge([en, tw]);
+      break;
+    default:
+      items = en;
+      break;
+  }
+  return items;
+}
+
+// Initialize artifacts on mount
+onMounted(() => {
+  artifacts.value = getItems();
+});
+
+watch(locale, () => {
+  artifacts.value = getItems();
+  // Need to wait for Vue to update the DOM
+  nextTick(() => {
+    if (selectpicker.value) {
+      $(selectpicker.value).selectpicker('destroy');
+      $(selectpicker.value).selectpicker({ title: props.title }).selectpicker('render');
+    }
+  });
 });
 </script>

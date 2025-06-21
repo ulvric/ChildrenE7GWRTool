@@ -1,4 +1,6 @@
-export const fr = [
+import { ArtifactIncomplete } from './types';
+
+export const fr: ArtifactIncomplete[] = [
   { _id: 'a-little-queens-huge-crown', name: "Couronne d'une petite reine" },
   { _id: 'a-song-for-everybody', name: 'Chant pour tous' },
   { _id: 'a-symbol-of-unity', name: 'Preuve de solidarit\u00e9' },
@@ -89,7 +91,7 @@ export const fr = [
   { _id: 'indestructible-gaiters', name: 'Gu\u00eatres indestructibles' },
   { _id: 'infinity-basket', name: 'Panier infini' },
   { _id: 'iron-fan', name: '\u00c9ventail de fer' },
-  { _id: 'jackos-symbol', name: "Symboles de Jack-O'" },
+  { _id: 'jack-os-symbol', name: "Symboles de Jack-O'" },
   { _id: 'junkyard-dog', name: 'Junkyard Dog' },
   { _id: 'justice-for-all', name: 'Justice pour tous' },
   { _id: 'kaladra', name: "Kal'adra" },

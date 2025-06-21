@@ -21,3 +21,15 @@ pnpm-debug.log*
 *.sln
 *.sw?
 /package-lock.json
+
+# Python
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+# Data Update Temp Files
+.tmp
