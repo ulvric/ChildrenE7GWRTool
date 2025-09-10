@@ -97,24 +97,15 @@ function initSelectpicker() {
 // Initialize characters and selectpicker on mount
 onMounted(() => {
   characters.value = getItems();
-  nextTick(() => {
-    initSelectpicker();
-  });
 });
 
 watch(locale, () => {
   characters.value = getItems();
   // Need to wait for Vue to update the DOM
   nextTick(() => {
-    initSelectpicker();
-  });
-});
-
-// Watch for modelValue changes to update selectpicker selection
-watch(() => props.modelValue, (newValue) => {
-  nextTick(() => {
-    if (selectpicker.value && newValue) {
-      $(selectpicker.value).selectpicker('val', newValue);
+    if (selectpicker.value) {
+      $(selectpicker.value).selectpicker('destroy');
+      $(selectpicker.value).selectpicker({ title: props.title }).selectpicker('render');
     }
   });
 });
