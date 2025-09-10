@@ -221,11 +221,17 @@ const updateLine = (enemy: EnemyType, baseSpeed: number, crBonus = 0, crPush = 0
   return content;
 };
 
-const formatHp = (num: number): number | string => {
-  let numFormated = num > 999 ? num / 1000 + (t('formatHpK') as string) : num;
+const formatHp = (num: number): string => {
+  if (num === 0 || !num) return '0';
+  
+  let numFormated: string;
+  
   if ($('#locale-changer :selected').val() === 'cn' || $('#locale-changer :selected').val() === 'tw') {
-    numFormated = num > 9999 ? num / 10000 + (t('formatHpK') as string) : num;
+    numFormated = num >= 10000 ? (Math.round(num / 1000) / 10).toFixed(1) + (t('formatHpK') as string) : num.toString();
+  } else {
+    numFormated = num >= 1000 ? (Math.round(num / 100) / 10).toFixed(1) + (t('formatHpK') as string) : num.toString();
   }
+  
   return numFormated;
 };
 
