@@ -218,6 +218,14 @@ export const en: Character[] = [
         "zodiac": "Cancer"
     },
     {
+        "_id": "aram",
+        "name": "Aram",
+        "rarity": 5,
+        "role": "Soul Weaver",
+        "attribute": "Fire",
+        "zodiac": "Scorpio"
+    },
+    {
         "_id": "aramintha",
         "name": "Aramintha",
         "rarity": 5,
@@ -248,6 +256,14 @@ export const en: Character[] = [
         "role": "Mage",
         "attribute": "Light",
         "zodiac": "Virgo"
+    },
+    {
+        "_id": "argent-waves-hwayoung",
+        "name": "Argent Waves Hwayoung",
+        "rarity": 5,
+        "role": "Thief",
+        "attribute": "Ice",
+        "zodiac": "Leo"
     },
     {
         "_id": "aria",
@@ -1130,6 +1146,14 @@ export const en: Character[] = [
         "zodiac": "Cancer"
     },
     {
+        "_id": "genesis-ras",
+        "name": "Genesis Ras",
+        "rarity": 5,
+        "role": "Knight",
+        "attribute": "Light",
+        "zodiac": "Libra"
+    },
+    {
         "_id": "glenn",
         "name": "Glenn",
         "rarity": 3,
@@ -1512,6 +1536,14 @@ export const en: Character[] = [
         "role": "Knight",
         "attribute": "Ice",
         "zodiac": "Pisces"
+    },
+    {
+        "_id": "lady-of-the-scales",
+        "name": "Lady of the Scales",
+        "rarity": 5,
+        "role": "Soul Weaver",
+        "attribute": "Light",
+        "zodiac": "Taurus"
     },
     {
         "_id": "laia",
@@ -2306,6 +2338,14 @@ export const en: Character[] = [
         "zodiac": "Aquarius"
     },
     {
+        "_id": "setsuka",
+        "name": "Setsuka",
+        "rarity": 5,
+        "role": "Thief",
+        "attribute": "Fire",
+        "zodiac": "Scorpio"
+    },
+    {
         "_id": "sez",
         "name": "Sez",
         "rarity": 5,
@@ -2752,6 +2792,14 @@ export const en: Character[] = [
         "role": "Ranger",
         "attribute": "Dark",
         "zodiac": "Gemini"
+    },
+    {
+        "_id": "witch-of-the-mere-tenebria",
+        "name": "Witch of the Mere Tenebria",
+        "rarity": 5,
+        "role": "Mage",
+        "attribute": "Light",
+        "zodiac": "Pisces"
     },
     {
         "_id": "yoonryoung",

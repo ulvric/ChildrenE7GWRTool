@@ -14,6 +14,12 @@ export const en: Artifact[] = [
         "role": "Warrior"
     },
     {
+        "_id": "a-precious-connection",
+        "name": "A Precious Connection",
+        "rarity": 5,
+        "role": "Knight"
+    },
+    {
         "_id": "a-song-for-everybody",
         "name": "A Song for Everybody",
         "rarity": 4,
@@ -674,6 +680,12 @@ export const en: Artifact[] = [
         "role": "Mage"
     },
     {
+        "_id": "lethal-whispers",
+        "name": "Lethal Whispers",
+        "rarity": 5,
+        "role": "Warrior"
+    },
+    {
         "_id": "love-potion",
         "name": "Love Potion",
         "rarity": 4,
@@ -882,6 +894,12 @@ export const en: Artifact[] = [
         "name": "Pure White Trust",
         "rarity": 5,
         "role": "Warrior"
+    },
+    {
+        "_id": "queens-whistle",
+        "name": "Queen\u2019s Whistle",
+        "rarity": 5,
+        "role": "Soul Weaver"
     },
     {
         "_id": "radiant-forever",
@@ -1166,6 +1184,18 @@ export const en: Artifact[] = [
         "role": "Warrior"
     },
     {
+        "_id": "strike-of-aspiration",
+        "name": "Strike of Aspiration",
+        "rarity": 5,
+        "role": "Warrior"
+    },
+    {
+        "_id": "summer-photogenic",
+        "name": "Summer Photogenic",
+        "rarity": 5,
+        "role": "Thief"
+    },
+    {
         "_id": "super-duper-water-gun-shooter",
         "name": "Super Duper Water Gun Shooter",
         "rarity": 4,
@@ -1380,6 +1410,12 @@ export const en: Artifact[] = [
         "name": "Wondrous Potion Vial",
         "rarity": 4,
         "role": "Soul Weaver"
+    },
+    {
+        "_id": "xii-the-hanged-man",
+        "name": "XII. The Hanged Man",
+        "rarity": 4,
+        "role": "Any"
     },
     {
         "_id": "xiii-death",
