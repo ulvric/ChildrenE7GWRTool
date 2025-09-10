@@ -1,6 +1,6 @@
 <template>
   <select
-    :value="model"
+    :value="modelValue"
     class="selectpicker"
     :title="title"
     data-live-search="true"
@@ -8,7 +8,7 @@
     @change="select($event)"
     ref="selectpicker"
   >
-    <option v-for="item in characters" :key="item._id" :data-tokens="getTokens(item)">
+    <option v-for="item in characters" :key="item._id" :value="item._id" :data-tokens="getTokens(item)">
       {{ item.name }}
     </option>
   </select>
@@ -28,17 +28,18 @@ import type { CharacterIncomplete } from '../assets/js/types';
 
 interface Props {
   title: string;
+  modelValue?: string;
 }
 
 const props = defineProps<Props>();
-const model = defineModel<string>()
+const emit = defineEmits(['update:modelValue']);
 
 const { locale } = useI18n({ useScope: 'global' });
 const characters = ref<CharacterIncomplete[]>(en);
 const selectpicker = ref<HTMLSelectElement>();
 
 function select($event: Event): void {
-  model.value = ($event.target as HTMLInputElement).value;
+  emit('update:modelValue', ($event.target as HTMLSelectElement).value);
 }
 
 function uniqueMerge(arrays: Array<CharacterIncomplete[]>) {
@@ -79,18 +80,41 @@ function getItems(): CharacterIncomplete[] {
   return items;
 }
 
-// Initialize characters on mount
+// Initialize Bootstrap Selectpicker
+function initSelectpicker() {
+  if (selectpicker.value) {
+    $(selectpicker.value).selectpicker({
+      title: props.title,
+      liveSearch: true,
+      width: '100%'
+    });
+    
+    // Refresh to reflect any changes
+    $(selectpicker.value).selectpicker('refresh');
+  }
+}
+
+// Initialize characters and selectpicker on mount
 onMounted(() => {
   characters.value = getItems();
+  nextTick(() => {
+    initSelectpicker();
+  });
 });
 
 watch(locale, () => {
   characters.value = getItems();
   // Need to wait for Vue to update the DOM
   nextTick(() => {
-    if (selectpicker.value) {
-      $(selectpicker.value).selectpicker('destroy');
-      $(selectpicker.value).selectpicker({ title: props.title }).selectpicker('render');
+    initSelectpicker();
+  });
+});
+
+// Watch for modelValue changes to update selectpicker selection
+watch(() => props.modelValue, (newValue) => {
+  nextTick(() => {
+    if (selectpicker.value && newValue) {
+      $(selectpicker.value).selectpicker('val', newValue);
     }
   });
 });
