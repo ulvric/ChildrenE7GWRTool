@@ -21,9 +21,6 @@
           />
           <label class="custom-control-label" for="darkSwitch">{{ t('darkMode') }}</label>
         </div>
-        <div class="custom-control">
-          <a href="https://www.buymeacoffee.com/apencoffee" target="_blank">Buy me a coffee</a>
-        </div>
       </div>
     </div>
   </nav>
