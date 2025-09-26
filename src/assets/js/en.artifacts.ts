@@ -644,6 +644,12 @@ export const en: Artifact[] = [
         "role": "Warrior"
     },
     {
+        "_id": "jumbo-berry-special",
+        "name": "Jumbo Berry Special",
+        "rarity": 5,
+        "role": "Warrior"
+    },
+    {
         "_id": "junkyard-dog",
         "name": "Junkyard Dog",
         "rarity": 5,
@@ -750,6 +756,12 @@ export const en: Artifact[] = [
         "name": "Mighty Yaksha",
         "rarity": 3,
         "role": "Any"
+    },
+    {
+        "_id": "mirrored-lotus-ring",
+        "name": "Mirrored Lotus Ring",
+        "rarity": 5,
+        "role": "Mage"
     },
     {
         "_id": "moonlight-dreamblade",

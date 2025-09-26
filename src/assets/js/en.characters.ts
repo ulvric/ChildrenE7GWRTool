@@ -1082,6 +1082,14 @@ export const en: Character[] = [
         "zodiac": "Taurus"
     },
     {
+        "_id": "fern",
+        "name": "Fern",
+        "rarity": 5,
+        "role": "Mage",
+        "attribute": "Ice",
+        "zodiac": "Scorpio"
+    },
+    {
         "_id": "festive-eda",
         "name": "Festive Eda",
         "rarity": 5,
@@ -1120,6 +1128,14 @@ export const en: Character[] = [
         "role": "Soul Weaver",
         "attribute": "Ice",
         "zodiac": "Taurus"
+    },
+    {
+        "_id": "frieren",
+        "name": "Frieren",
+        "rarity": 5,
+        "role": "Mage",
+        "attribute": "Earth",
+        "zodiac": "Leo"
     },
     {
         "_id": "fumyr",
@@ -2498,6 +2514,14 @@ export const en: Character[] = [
         "zodiac": "Sagittarius"
     },
     {
+        "_id": "stark",
+        "name": "Stark",
+        "rarity": 5,
+        "role": "Warrior",
+        "attribute": "Fire",
+        "zodiac": "Capricorn"
+    },
+    {
         "_id": "straze",
         "name": "Straze",
         "rarity": 5,
@@ -2800,6 +2824,14 @@ export const en: Character[] = [
         "role": "Mage",
         "attribute": "Light",
         "zodiac": "Pisces"
+    },
+    {
+        "_id": "wretched-rose",
+        "name": "Wretched Rose",
+        "rarity": 4,
+        "role": "Soul Weaver",
+        "attribute": "Light",
+        "zodiac": "Gemini"
     },
     {
         "_id": "yoonryoung",
