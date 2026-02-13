@@ -140,6 +140,12 @@ export const en: Artifact[] = [
         "role": "Knight"
     },
     {
+        "_id": "awakened-leaf",
+        "name": "Awakened Leaf",
+        "rarity": 5,
+        "role": "Ranger"
+    },
+    {
         "_id": "azure-comet",
         "name": "Azure Comet",
         "rarity": 5,
@@ -228,6 +234,12 @@ export const en: Artifact[] = [
         "name": "Broken Will of the Priest",
         "rarity": 5,
         "role": "Knight"
+    },
+    {
+        "_id": "butterfly-hair-ornament",
+        "name": "Butterfly Hair Ornament",
+        "rarity": 5,
+        "role": "Mage"
     },
     {
         "_id": "butterfly-mandolin",
@@ -512,6 +524,12 @@ export const en: Artifact[] = [
         "role": "Ranger"
     },
     {
+        "_id": "glorious-flag",
+        "name": "Glorious Flag",
+        "rarity": 5,
+        "role": "Thief"
+    },
+    {
         "_id": "goblet-of-oath",
         "name": "Goblet of Oath",
         "rarity": 5,
@@ -724,6 +742,12 @@ export const en: Artifact[] = [
     {
         "_id": "manica-of-control",
         "name": "Manica of Control",
+        "rarity": 5,
+        "role": "Thief"
+    },
+    {
+        "_id": "master-of-the-nightmare",
+        "name": "Master of the Nightmare",
         "rarity": 5,
         "role": "Thief"
     },
@@ -966,6 +990,12 @@ export const en: Artifact[] = [
         "name": "Rise of a Monarch",
         "rarity": 5,
         "role": "Knight"
+    },
+    {
+        "_id": "ritual-of-sealing-flames",
+        "name": "Ritual of Sealing Flames",
+        "rarity": 5,
+        "role": "Warrior"
     },
     {
         "_id": "rocket-punch-gauntlet",
@@ -1308,6 +1338,12 @@ export const en: Artifact[] = [
         "name": "To a New World",
         "rarity": 4,
         "role": "Any"
+    },
+    {
+        "_id": "tome-of-lifes-end",
+        "name": "Tome of Life's End",
+        "rarity": 5,
+        "role": "Warrior"
     },
     {
         "_id": "torn-sleeve",

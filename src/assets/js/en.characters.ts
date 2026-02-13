@@ -130,6 +130,14 @@ export const en: Character[] = [
         "zodiac": "Libra"
     },
     {
+        "_id": "aki",
+        "name": "Aki",
+        "rarity": 5,
+        "role": "Warrior",
+        "attribute": "Fire",
+        "zodiac": "Pisces"
+    },
+    {
         "_id": "albedo",
         "name": "Albedo",
         "rarity": 5,
@@ -1266,6 +1274,14 @@ export const en: Character[] = [
         "zodiac": "Aquarius"
     },
     {
+        "_id": "hecate",
+        "name": "Hecate",
+        "rarity": 5,
+        "role": "Warrior",
+        "attribute": "Earth",
+        "zodiac": "Capricorn"
+    },
+    {
         "_id": "helen",
         "name": "Helen",
         "rarity": 3,
@@ -1858,6 +1874,14 @@ export const en: Character[] = [
         "zodiac": "Leo"
     },
     {
+        "_id": "monarch-of-the-sword-iseria",
+        "name": "Monarch of the Sword Iseria",
+        "rarity": 5,
+        "role": "Knight",
+        "attribute": "Light",
+        "zodiac": "Taurus"
+    },
+    {
         "_id": "montmorancy",
         "name": "Montmorancy",
         "rarity": 3,
@@ -2290,6 +2314,14 @@ export const en: Character[] = [
         "zodiac": "Taurus"
     },
     {
+        "_id": "saria",
+        "name": "Saria",
+        "rarity": 5,
+        "role": "Ranger",
+        "attribute": "Earth",
+        "zodiac": "Taurus"
+    },
+    {
         "_id": "savior-adin",
         "name": "Savior Adin",
         "rarity": 3,
@@ -2306,6 +2338,14 @@ export const en: Character[] = [
         "zodiac": "Taurus"
     },
     {
+        "_id": "school-nurse-yulha",
+        "name": "School Nurse Yulha",
+        "rarity": 5,
+        "role": "Thief",
+        "attribute": "Dark",
+        "zodiac": "Cancer"
+    },
+    {
         "_id": "schuri",
         "name": "Schuri",
         "rarity": 4,
@@ -2320,6 +2360,14 @@ export const en: Character[] = [
         "role": "Ranger",
         "attribute": "Dark",
         "zodiac": "Pisces"
+    },
+    {
+        "_id": "sealed-eye-surin",
+        "name": "Sealed Eye Surin",
+        "rarity": 4,
+        "role": "Mage",
+        "attribute": "Dark",
+        "zodiac": "Aquarius"
     },
     {
         "_id": "seaside-bellona",
@@ -2408,6 +2456,14 @@ export const en: Character[] = [
         "role": "Mage",
         "attribute": "Ice",
         "zodiac": "Aries"
+    },
+    {
+        "_id": "shepherd-of-the-dark-diene",
+        "name": "Shepherd of the Dark Diene",
+        "rarity": 5,
+        "role": "Mage",
+        "attribute": "Dark",
+        "zodiac": "Libra"
     },
     {
         "_id": "shooting-star-achates",
@@ -2584,6 +2640,14 @@ export const en: Character[] = [
         "role": "Thief",
         "attribute": "Dark",
         "zodiac": "Scorpio"
+    },
+    {
+        "_id": "swift-flagbearer-sigret",
+        "name": "Swift Flagbearer Sigret",
+        "rarity": 5,
+        "role": "Thief",
+        "attribute": "Fire",
+        "zodiac": "Capricorn"
     },
     {
         "_id": "sylvan-sage-vivian",
