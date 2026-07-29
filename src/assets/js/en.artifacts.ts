@@ -518,6 +518,12 @@ export const en: Artifact[] = [
         "role": "Warrior"
     },
     {
+        "_id": "gifted-pen",
+        "name": "Gifted Pen",
+        "rarity": 5,
+        "role": "Ranger"
+    },
+    {
         "_id": "glo-wings-21",
         "name": "Glo-Wings 21",
         "rarity": 5,
@@ -528,6 +534,12 @@ export const en: Artifact[] = [
         "name": "Glorious Flag",
         "rarity": 5,
         "role": "Thief"
+    },
+    {
+        "_id": "glorious-throne",
+        "name": "Glorious Throne",
+        "rarity": 5,
+        "role": "Knight"
     },
     {
         "_id": "goblet-of-oath",
@@ -1082,6 +1094,12 @@ export const en: Artifact[] = [
         "role": "Mage"
     },
     {
+        "_id": "shadow-winds-7",
+        "name": "Shadow Winds 7",
+        "rarity": 5,
+        "role": "Thief"
+    },
+    {
         "_id": "sharpshooters-handgun",
         "name": "Sharpshooter's Handgun",
         "rarity": 5,
@@ -1386,6 +1404,12 @@ export const en: Artifact[] = [
         "name": "Unfading Memories",
         "rarity": 5,
         "role": "Soul Weaver"
+    },
+    {
+        "_id": "unleashed-axe-of-heavenly-mandate",
+        "name": "Unleashed Axe of Heavenly Mandate",
+        "rarity": 5,
+        "role": "Any"
     },
     {
         "_id": "unseen-observer",

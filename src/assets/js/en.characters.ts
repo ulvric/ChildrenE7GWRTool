@@ -338,6 +338,14 @@ export const en: Character[] = [
         "zodiac": "Libra"
     },
     {
+        "_id": "aubade-ludwig",
+        "name": "Aubade Ludwig",
+        "rarity": 5,
+        "role": "Ranger",
+        "attribute": "Ice",
+        "zodiac": "Capricorn"
+    },
+    {
         "_id": "auxiliary-lots",
         "name": "Auxiliary Lots",
         "rarity": 4,
@@ -1026,12 +1034,28 @@ export const en: Character[] = [
         "zodiac": "Scorpio"
     },
     {
+        "_id": "estelle",
+        "name": "Estelle",
+        "rarity": 5,
+        "role": "Knight",
+        "attribute": "Earth",
+        "zodiac": "Sagittarius"
+    },
+    {
         "_id": "eternal-wanderer-ludwig",
         "name": "Eternal Wanderer Ludwig",
         "rarity": 5,
         "role": "Mage",
         "attribute": "Dark",
         "zodiac": "Leo"
+    },
+    {
+        "_id": "eye-of-the-abyss-fumyr",
+        "name": "Eye of the Abyss Fumyr",
+        "rarity": 5,
+        "role": "Mage",
+        "attribute": "Earth",
+        "zodiac": "Libra"
     },
     {
         "_id": "ezra",
@@ -1392,6 +1416,14 @@ export const en: Character[] = [
         "role": "Ranger",
         "attribute": "Earth",
         "zodiac": "Leo"
+    },
+    {
+        "_id": "ivana",
+        "name": "Ivana",
+        "rarity": 5,
+        "role": "Soul Weaver",
+        "attribute": "Fire",
+        "zodiac": "Taurus"
     },
     {
         "_id": "jack-o",
@@ -1978,6 +2010,14 @@ export const en: Character[] = [
         "zodiac": "Libra"
     },
     {
+        "_id": "notos",
+        "name": "Notos",
+        "rarity": 5,
+        "role": "Knight",
+        "attribute": "Light",
+        "zodiac": "Cancer"
+    },
+    {
         "_id": "ocean-breeze-luluca",
         "name": "Ocean Breeze Luluca",
         "rarity": 5,
@@ -2048,6 +2088,14 @@ export const en: Character[] = [
         "role": "Thief",
         "attribute": "Dark",
         "zodiac": "Scorpio"
+    },
+    {
+        "_id": "perfumer-byblis",
+        "name": "Perfumer Byblis",
+        "rarity": 5,
+        "role": "Soul Weaver",
+        "attribute": "Fire",
+        "zodiac": "Virgo"
     },
     {
         "_id": "pernilla",
@@ -2186,6 +2234,14 @@ export const en: Character[] = [
         "zodiac": "Scorpio"
     },
     {
+        "_id": "rhianna-and-luciella",
+        "name": "Rhianna and Luciella",
+        "rarity": 5,
+        "role": "Thief",
+        "attribute": "Dark",
+        "zodiac": "Aquarius"
+    },
+    {
         "_id": "righteous-thief-roozid",
         "name": "Righteous Thief Roozid",
         "rarity": 3,
@@ -2306,12 +2362,28 @@ export const en: Character[] = [
         "zodiac": "Pisces"
     },
     {
+        "_id": "ruiza",
+        "name": "Ruiza",
+        "rarity": 5,
+        "role": "Ranger",
+        "attribute": "Fire",
+        "zodiac": "Pisces"
+    },
+    {
         "_id": "sage-baal-and-sezan",
         "name": "Sage Baal & Sezan",
         "rarity": 5,
         "role": "Mage",
         "attribute": "Light",
         "zodiac": "Taurus"
+    },
+    {
+        "_id": "salome",
+        "name": "Salome",
+        "rarity": 5,
+        "role": "Warrior",
+        "attribute": "Dark",
+        "zodiac": "Aries"
     },
     {
         "_id": "saria",
@@ -2656,6 +2728,14 @@ export const en: Character[] = [
         "role": "Mage",
         "attribute": "Light",
         "zodiac": "Cancer"
+    },
+    {
+        "_id": "tactical-archetype-coli",
+        "name": "Tactical Archetype Coli",
+        "rarity": 5,
+        "role": "Thief",
+        "attribute": "Ice",
+        "zodiac": "Capricorn"
     },
     {
         "_id": "taeyou",
